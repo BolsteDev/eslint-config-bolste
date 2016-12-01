@@ -1,0 +1,53 @@
+{
+  "name": "eslint-config-bolste",
+  "version": "1.0.0",
+  "description": "Bolste's base JS ESLint config",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "tests-only" : "babel-tape-runner ./test/test-*.js",
+    "prepublish": "(in-install || eslint-find-rules --unused) && (not-in-publish || npm test) && safe-publish-latest",
+    "pretest": "npm run --silent lint",
+    "test": "npm run --silent tests-only",
+    "circle": "npm run --silent test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bolstedev/javascript"
+  },
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "config",
+    "bolste",
+    "javascript",
+    "styleguide"
+  ],
+  "author": "Ivan Montiel <imontiel@bolste.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-eslint": "^6.0.0-beta.6",
+    "babel-preset-bolste": "^1.0.1",
+    "babel-tape-runner": "~2.0.1",
+    "eslint": "^3.10.2",
+    "eslint-find-rules": "^1.14.3",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^2.2.1",
+    "eslint-plugin-react": "^4.2.3",
+    "eslint-plugin-sort-class-members": "^1.0.1",
+    "in-publish": "^2.0.0",
+    "safe-publish-latest": "^1.1.1",
+    "tape": "^4.6.2"
+  },
+  "peerDependencies": {
+    "babel-eslint": "^6.0.0-beta.6",
+    "eslint": "^3.10.2",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^2.2.1",
+    "eslint-plugin-react": "^4.2.3",
+    "eslint-plugin-sort-class-members": "^1.0.1"
+  },
+  "engines": {
+    "node": ">= 4"
+  }
+}
