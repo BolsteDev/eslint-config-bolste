@@ -17,7 +17,7 @@ module.exports = {
 
     // Prevent usage of deprecated methods
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-deprecated.md
-    'react/no-deprecated': ['error'],
+    'react/no-deprecated': 'error',
 
     'react/sort-comp': 'off',
 
@@ -136,5 +136,9 @@ module.exports = {
     'react/self-closing-comp': 'error',
 
     'react/wrap-multilines': 'off', // deprecated version
+
+    // Require render() methods to return something
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/require-render-return.md
+    'react/require-render-return': 'error',
   },
 };
