@@ -1,5 +1,5 @@
 {
-  "name": "eslint-plugin-bolste",
+  "name": "eslint-config-bolste",
   "version": "1.0.1",
   "description": "Bolste's base JS ESLint config",
   "main": "index.js",
