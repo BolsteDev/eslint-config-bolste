@@ -1,11 +1,11 @@
 {
-  "name": "eslint-config-bolste",
-  "version": "1.0.0",
+  "name": "eslint-plugin-bolste",
+  "version": "1.0.1",
   "description": "Bolste's base JS ESLint config",
   "main": "index.js",
   "scripts": {
     "lint": "eslint .",
-    "tests-only" : "babel-tape-runner ./test/test-*.js",
+    "tests-only": "babel-tape-runner ./test/test-*.js",
     "prepublish": "(in-install || eslint-find-rules --unused) && (not-in-publish || npm test) && safe-publish-latest",
     "pretest": "npm run --silent lint",
     "test": "npm run --silent tests-only",

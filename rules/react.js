@@ -26,5 +26,7 @@ module.exports = {
 
     // Allow dangerous html, WE KNOW WHAT WE ARE DOING
     'react/no-danger': 'off',
+
+    'react/no-did-mount-set-state': 'error',
   },
 };

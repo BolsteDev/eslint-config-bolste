@@ -14,7 +14,7 @@ module.exports = {
     'plugin:react/recommended',
     'plugin:import/errors',
     'plugin:import/warnings',
-
+  ].concat([
     './rules/best-practices.js',
     './rules/errors.js',
     './rules/es6.js',
@@ -26,7 +26,7 @@ module.exports = {
     './rules/imports.js',
     './rules/react.js',
     './rules/react-a11y.js',
-  ],
+  ].map(require.resolve)),
   globals: {
     global: false,
     Promise: false,

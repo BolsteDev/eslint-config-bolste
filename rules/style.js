@@ -26,7 +26,7 @@ module.exports = {
     'consistent-this': 'off',
 
     // enforce newline at the end of file, with no multiple empty lines
-    'eol-last': ['error', 'always'],
+    'eol-last': 'error',
 
     // enforce spacing between functions and their invocations
     // http://eslint.org/docs/rules/func-call-spacing
@@ -109,13 +109,7 @@ module.exports = {
 
     // specify the maximum length of a line in your program
     // http://eslint.org/docs/rules/max-len
-    'max-len': ['error', 100, 2, {
-      ignoreUrls: true,
-      ignoreComments: false,
-      ignoreRegExpLiterals: true,
-      ignoreStrings: true,
-      ignoreTemplateLiterals: true,
-    }],
+    'max-len': 'off',
 
     // specify the max number of lines in a file
     // http://eslint.org/docs/rules/max-lines
@@ -215,7 +209,7 @@ module.exports = {
 
     // disallow use of unary operators, ++ and --
     // http://eslint.org/docs/rules/no-plusplus
-    'no-plusplus': 'error',
+    'no-plusplus': ['error', { allowForLoopAfterthoughts: true }],
 
     // disallow certain syntax forms
     // http://eslint.org/docs/rules/no-restricted-syntax
@@ -240,7 +234,7 @@ module.exports = {
     'no-trailing-spaces': 'error',
 
     // disallow dangling underscores in identifiers
-    'no-underscore-dangle': ['error', { allowAfterThis: false }],
+    'no-underscore-dangle': 'off',
 
     // disallow the use of Boolean literals in conditional expressions
     // also, prefer `a || b` over `a ? a : b`
@@ -313,11 +307,7 @@ module.exports = {
 
     // require or disallow space before function opening parenthesis
     // http://eslint.org/docs/rules/space-before-function-paren
-    'space-before-function-paren': ['error', {
-      anonymous: 'always',
-      named: 'never',
-      asyncArrow: 'always',
-    }],
+    'space-before-function-paren': ['off'],
 
     // require or disallow spaces inside parentheses
     'space-in-parens': ['error', 'never'],
