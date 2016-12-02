@@ -135,10 +135,78 @@ module.exports = {
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/self-closing-comp.md
     'react/self-closing-comp': 'error',
 
-    'react/wrap-multilines': 'off', // deprecated version
-
     // Require render() methods to return something
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/require-render-return.md
     'react/require-render-return': 'error',
+
+    // Forbid certain props on Components
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/forbid-component-props.md
+    'react/forbid-component-props': ['off', { forbid: [] }],
+
+    // only .jsx files may have JSX
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-filename-extension.md
+    'react/jsx-filename-extension': ['error', { extensions: ['.jsx', '.js'] }],
+
+    // Require that the first prop in a JSX element be on a new line when the element is multiline
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-first-prop-new-line.md
+    'react/jsx-first-prop-new-line': ['error', 'multiline'],
+
+    // prevent accidental JS comments from being injected into JSX as text
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-comment-textnodes.md
+    'react/jsx-no-comment-textnodes': 'error',
+    'react/no-comment-textnodes': 'off', // deprecated version
+
+    // Disallow target="_blank" on links
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-target-blank.md
+    'react/jsx-no-target-blank': 'off',
+
+    // Validate whitespace in and around the JSX opening and closing brackets
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-tag-spacing.md
+    'react/jsx-tag-spacing': ['error', {
+      closingSlash: 'never',
+      beforeSelfClosing: 'always',
+      afterOpening: 'never',
+    }],
+
+    // Prevent missing parentheses around multilines JSX
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-wrap-multilines.md
+    'react/jsx-wrap-multilines': ['error', {
+      declaration: true,
+      assignment: true,
+      return: true,
+    }],
+    'react/wrap-multilines': 'off', // deprecated version
+
+    // Prevent passing of children as props
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-children-prop.md
+    'react/no-children-prop': 'error',
+
+    // Prevent problem with children and props.dangerouslySetInnerHTML
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-danger-with-children.md
+    'react/no-danger-with-children': 'error',
+
+    // Prevent usage of setState in componentDidUpdate
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-did-update-set-state.md
+    'react/no-did-update-set-state': ['error'],
+
+    // Prevent invalid characters from appearing in markup
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-unescaped-entities.md
+    'react/no-unescaped-entities': 'error',
+
+    // Prevent unused propType definitions
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-unused-prop-types.md
+    'react/no-unused-prop-types': ['error', {
+      customValidators: [
+      ],
+      skipShapeProps: true,
+    }],
+
+    // require a shouldComponentUpdate method, or PureRenderMixin
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/require-optimization.md
+    'react/require-optimization': ['off', { allowDecorators: [] }],
+
+    // Require style prop value be an object or var
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/style-prop-object.md
+    'react/style-prop-object': 'error',
   },
 };
